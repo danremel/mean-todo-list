@@ -1,5 +1,14 @@
+* {
+  border: 2px solid black;
+}
+
+#app-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 body {
-  font-family: Open Sans;
+  font-family: "Open Sans";
   font-size: 18px;
 }
 
@@ -31,4 +40,30 @@ body {
 #logo {
   height: 1.4em;
   width: auto;
+}
+
+.task-list-entry media {
+min-height: 50vh;
+}
+
+.media-body div {
+  display: inline-block;
+}
+
+.media-body input {
+  width: 70%;
+}
+
+.single-task {
+  min-width: 70%;
+}
+
+.task-list {
+  width: 50%;
+}
+
+footer {
+  font-size: 12px;
+  text-align: center;
+  border-bottom: 3px solid rgb(42, 172, 169);  
 }
