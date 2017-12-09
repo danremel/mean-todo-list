@@ -2,6 +2,10 @@
 body {
   background: #f1f1f1;
 }
+
+app {
+  font-family: "Open Sans";
+}
 .navbar {
   background: #fff;
   margin-bottom: 20px;
@@ -10,6 +14,36 @@ body {
   height: 40px;
   width: 50px;
 }
+
+.nav, nav {
+  align-items: center;
+  background-color: rgb(42, 172, 169);
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  height: 1.722em;
+  justify-content: center;
+  min-height: 50px;
+  padding: 0 20px;
+  position: relative;
+  text-align: center;
+  border-bottom: 1px solid rgb(221, 196, 177);
+}
+
+.header, header {
+  background: linear-gradient(
+    rgba(20,20,20, .5), 
+    rgba(20,20,20, .5)),
+    url("images/photo-1469920783271-4ee08a94d42d.jpg");
+  background-size: 100%;
+  background-position: center;
+  height: 50vh;
+}
+#logo {
+  height: 1.5em;
+  width: auto;
+}
+
 .search-bar {
   border-radius: 1px;
   background: #fff;
@@ -24,6 +58,7 @@ body {
   background: #f8f8f8;
   width: 20%;
   margin-left: -1px;
+  font-family: Open Sans;
 }
 .search-bar .btn:hover {
   border-color: #c6c6c6;
