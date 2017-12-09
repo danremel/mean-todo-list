@@ -1,4 +1,4 @@
-angular.module('todo-app', []);
+angular.module('todo-app', [])
 
 .component('app', {
   templateUrl: 'client/templates/app.html',
@@ -6,7 +6,7 @@ angular.module('todo-app', []);
     // Maintains the 'this' scope
     let $ctrl = this;
     $ctrl.tasks = [];
-    $gttp.get('/api/tasks').then(function(res) {
+    $http.get('/api/tasks').then(function(res) {
       res.data.forEach((obj) => {
         $ctrl.tasks.push(obj);
       })
