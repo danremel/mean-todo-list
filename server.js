@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 
 const index = require('./routes/index');
-const tasks = require('./routes/tasks');
+const lists = require('./routes/lists');
 
 const app = express();
 // PORT
@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 // Routes
 app.use('/', index); // Home page route
-app.use('/api', tasks); // API call routes
+app.use('/api', lists); // API call routes
 
 // Start the server
 app.listen(port, function() {

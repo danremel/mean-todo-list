@@ -1,5 +1,5 @@
 * {
-  border: 2px solid black;
+  border: 1px solid black;
 }
 
 #app-container {
@@ -18,8 +18,8 @@ body {
   color: #FFFFFF;
   display: flex;
   flex-direction: column;
-  height: 1.722em;
   justify-content: center;
+  height: 1.722em;
   min-height: 50px;
   padding: 0 20px;
   position: relative;
@@ -41,6 +41,87 @@ body {
   height: 1.4em;
   width: auto;
 }
+
+.lists-container {
+  border-top: 1px solid rgb(221, 196, 177);
+  border-bottom: 1px solid rgb(221, 196, 177);
+  width: 35%;
+  min-height: 40vh;
+  /* margin: 2% 5% 2% 45%; */
+  color: #5d5d5d;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: center;
+}
+
+.list-input {
+  width: 50%;
+  float: right;
+  font-size: 18px;
+  outline: none;
+  margin-bottom: 15%;
+}
+
+.tasks-container {
+  border-top: 1px solid rgb(221, 196, 177);
+  border-bottom: 1px solid rgb(221, 196, 177);
+  width: 50%;
+  min-height: 40vh;
+  margin: 2% 45% 2% 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-content: center;
+}
+
+.lists {
+  display: block;
+  justify-content: flex-end;
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+  min-height: 10vh;
+}
+
+.lists li {
+  font-size: 5px;
+  text-align: left;
+  padding: 0
+}
+
+.lists li .item {
+  width: 90%;
+  font-size: 18px;
+  height: inherit;
+}
+
+.lists li .clickable:hover {
+  cursor: pointer;
+}
+
+.lists li div {
+  float: right;
+  width: 9%;
+  height: inherit;
+  font-size: 1.5em;
+}
+
+.backButton {
+  color: white;
+}
+
+.backButton:hover {
+  cursor: pointer;
+}
+.lists-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+
 
 .task-list-entry media {
 min-height: 50vh;
@@ -69,5 +150,8 @@ min-height: 50vh;
 footer {
   font-size: 12px;
   text-align: center;
-  border-bottom: 3px solid rgb(42, 172, 169);  
+  border-bottom: 3px solid rgb(42, 172, 169);
+  position: relative;
+  bottom: 0;
+  width: 100%;  
 }

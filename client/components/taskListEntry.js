@@ -15,7 +15,8 @@ angular.module('todo-app')
       }
       list.editing = false;
       list = {
-        list: list
+        list: list,
+        tasks: [ ]
       }
       // Send out an update request
       $http.put('/api/lists/' + list.list._id, list).then((res) => {

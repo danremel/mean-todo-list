@@ -1,4 +1,6 @@
-<ol class="task-list">
-  <task-list-entry ng-repeat="list in $ctrl.lists track by list._id"
-    lists="$ctrl.lists" list="list"></task-list-entry>
-</ol>
+<div class="pull-right">
+<ol>
+    <task-list-entry ng-repeat="list in $ctrl.lists track by list._id"
+      lists="$ctrl.lists" list="list"></task-list-entry>
+  </ol>
+</div>

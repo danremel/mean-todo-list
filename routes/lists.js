@@ -58,6 +58,7 @@ router.delete('/lists/:id', function(req, res, next) {
 // Update list
 router.put('/lists/:id', function(req, res, next) {
   let list = req.body.list;
+
   let updatedList = {};
   if (list) {
     updatedList = list;
