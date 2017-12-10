@@ -1,81 +1,81 @@
 const express = require('express');
 const router = express.Router();
 const mongojs = require('mongojs');
-const db = mongojs('tasks', ['tasks']);
+const db = mongojs('lists', ['lists']);
 
 // Get all tasks
-router.get('/tasks', function(req, res, next) {
-  db.tasks.find(function(err, tasks) {
+router.get('/lists', function(req, res, next) {
+  db.lists.find(function(err, lists) {
     if (err) {
       res.status(404);
       res.send(err);
     }
-    res.json(tasks);
+    res.json(lists);
   });
 });
 
-// Get single task
-router.get('/tasks/:id', function(req, res, next) {
-  db.tasks.findOne({_id: mongojs.ObjectId(req.params.id)}, function(err, task) {
+// Get single list
+router.get('/lists/:id', function(req, res, next) {
+  db.lists.findOne({_id: mongojs.ObjectId(req.params.id)}, function(err, list) {
     if (err) {
       res.status(404);
       res.send(err);
     }
-    res.json(task);
+    res.json(list);
   });
 });
 
-// Save tasks
-router.post('/tasks', function(req, res, next) {
-  let task = req.body;
-  if (!task) {
+// Save lists
+router.post('/lists', function(req, res, next) {
+  let list = req.body;
+  if (!list) {
     res.status(404);
     res.json({
       error: 'information is invalid'
     });
   } else {
-    db.tasks.save(task, function(err, task) {
+    db.lists.save(list, function(err, list) {
       if (err) {
         res.status(404);
         res.send(err);
       }
-      res.json(task);
+      res.json(list);
     });
   }
 });
 
-// Delete task
-router.delete('/tasks/:id', function(req, res, next) {
-  db.tasks.remove({_id: mongojs.ObjectId(req.params.id)}, function(err, task) {
+// Delete list
+router.delete('/lists/:id', function(req, res, next) {
+  db.lists.remove({_id: mongojs.ObjectId(req.params.id)}, function(err, list) {
     if (err) {
       res.status(404);
       res.send(err);
     }
-    res.json(task);
+    res.json(list);
   });
 });
 
-// Update task
-router.put('/tasks/:id', function(req, res, next) {
-  let task = req.body.task;
-  let updatedTask = {};
-  if (task) {
-    updatedTask = task;
+// Update list
+router.put('/lists/:id', function(req, res, next) {
+  let list = req.body.list;
+  let updatedList = {};
+  if (list) {
+    updatedList = list;
     // Needed to prevent overwriting errors
-    delete updatedTask._id;
+    delete updatedList._id;
   }
-  db.tasks.update({_id: mongojs.ObjectId(req.params.id)}, updatedTask, {}, function(err, task) {
+  db.lists.update({_id: mongojs.ObjectId(req.params.id)}, updatedList, {}, function(err, list) {
     if (err) {
       res.status(404);
       res.send(err);
     }
-    res.json(task);
+    res.json(list);
   });
 });
 
-// Set Tasks Route (Original test route)
-// router.get('/tasks', function(req, res, next) {
-//   res.send('Hello from tasks API :)');
+// Set lists Route (Original test route)
+// router.get('/lists', function(req, res, next) {
+//   res.send('Hello from lists API :)');
 // });
 
 module.exports = router;

@@ -5,10 +5,10 @@ angular.module('todo-app', [])
   controller: function($http) {
     // Maintains the 'this' scope
     let $ctrl = this;
-    $ctrl.tasks = [];
-    $http.get('/api/tasks').then(function(res) {
+    $ctrl.lists = [];
+    $http.get('/api/lists').then(function(res) {
       res.data.forEach((obj) => {
-        $ctrl.tasks.push(obj);
+        $ctrl.lists.push(obj);
       })
     })
   }

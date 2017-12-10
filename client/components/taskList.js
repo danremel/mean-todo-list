@@ -4,6 +4,6 @@ angular.module('todo-app')
   templateUrl: 'client/templates/taskList.html',
   controller: function() {},
   bindings: {
-    tasks: '<'
+    lists: '<'
   }
 });

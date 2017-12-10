@@ -1,13 +1,13 @@
 <li ng-if="!$ctrl.task.editing" class="task-list-entry media">
   <div class="media-body">
-    <div class="single-task" ng-click="$ctrl.toggleEdit($ctrl.task)">{{$ctrl.task.task}}</div>
-    <div class="btn" ng-click="$ctrl.deleteTask($ctrl.task)"><img src="/images/icon_close.svg"/></div>
+    <div class="single-task" ng-click="$ctrl.toggleEdit($ctrl.list)">{{$ctrl.list.list}}</div>
+    <div class="btn" ng-click="$ctrl.deleteList($ctrl.list)"><img src="/images/icon_close.svg"/></div>
   </div>
 </li>
 
-<li ng-if="$ctrl.task.editing" class="task-list-entry media">
+<li ng-if="$ctrl.list.editing" class="task-list-entry media">
   <div class="media-body">
-    <input ngclass="form-control" type="text" ng-model="$ctrl.task.task" />
-    <div class="btn" ng-click="$ctrl.updateTask($ctrl.task)"><img src="/images/icon_check.svg"/></div>
+    <input ngclass="form-control" type="text" ng-model="$ctrl.list.list" />
+    <div class="btn" ng-click="$ctrl.updateList($ctrl.list)"><img src="/images/icon_check.svg"/></div>
   </div>
 </li>

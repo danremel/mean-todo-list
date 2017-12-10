@@ -14,7 +14,7 @@ body {
 
 .nav, nav {
   align-items: center;
-  background-color: rgb(42, 172, 169);
+  background-color: #2aaca9;
   color: #FFFFFF;
   display: flex;
   flex-direction: column;
@@ -56,6 +56,10 @@ min-height: 50vh;
 
 .single-task {
   min-width: 70%;
+}
+
+.col-md-5 {
+  float: right;
 }
 
 .task-list {

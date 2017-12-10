@@ -4,36 +4,36 @@ angular.module('todo-app')
   templateUrl: 'client/templates/taskListEntry.html',
   controller: function($http) {
     $ctrl = this;
-    $ctrl.toggleEdit = function(task) {
+    $ctrl.toggleEdit = function(list) {
       // Sets the edit value to the opposite of what it currently is (toggle).
-      task.editing = !task.editing;
+      list.editing = !list.editing;
     }
-    $ctrl.updateTask = function(task) {
+    $ctrl.updateList = function(list) {
       // Checks for empty edit values
-      if (!task.task) {
-        return alert('Please enter a task');
+      if (!list.list) {
+        return alert('Please enter a list');
       }
-      task.editing = false;
-      task = {
-        task: task
+      list.editing = false;
+      list = {
+        list: list
       }
       // Send out an update request
-      $http.put('/api/tasks/' + task.task._id, task).then((res) => {
-        $ctrl.toggleEdit(task);
+      $http.put('/api/lists/' + list.list._id, list).then((res) => {
+        $ctrl.toggleEdit(list);
       })
     }
-    // Delete a specific task
-    $ctrl.deleteTask = function(task) {
-      $http.delete('/api/tasks/' + task._id)
+    // Delete a specific list
+    $ctrl.deleteList = function(list) {
+      $http.delete('/api/lists/' + list._id)
       .then((res) => {
-        let i = $ctrl.tasks.indexOf(task);
-        // Remove the task from the specific task list
-        $ctrl.tasks.splice(i, 1);
+        let i = $ctrl.lists.indexOf(list);
+        // Remove the list from the specific list list
+        $ctrl.lists.splice(i, 1);
       })
     }
   },
   bindings: {
-    task: '<', // Bind the individual task
-    tasks: '<' // Bind the task list
+    list: '<', // Bind the individual list
+    lists: '<' // Bind the list list
   }
 });
