@@ -74,9 +74,4 @@ router.put('/lists/:id', function(req, res, next) {
   });
 });
 
-// Set lists Route (Original test route)
-// router.get('/lists', function(req, res, next) {
-//   res.send('Hello from lists API :)');
-// });
-
 module.exports = router;

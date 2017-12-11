@@ -3,7 +3,7 @@
   <div class="media-body">
     <div class="single-task" ng-dblclick="$ctrl.toggleEdit($ctrl.list)">{{$ctrl.list.list}}</div>
     <div ng-repeat="task in $ctrl.list.tasks track by list._id">{{$ctrl.list.tasks}}</div>
-    <div class="btn" ng-click="$ctrl.deleteList($ctrl.list)"><img src="/images/icon_close.svg"/></div>
+    <div class="btn" ng-click="$ctrl.deleteList($ctrl.list)"><img src="/images/icon_check.svg"/></div>
   </div>
 </li>
 

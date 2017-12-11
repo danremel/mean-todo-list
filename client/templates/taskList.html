@@ -1,8 +1,11 @@
 <div class="left-column">
   <ol>
-    <input class="list-title-input"ngclass="form-control" placeholder="list.title" ng-model="$ctrl.list" type="text" />  
-    <task-list-entry ng-repeat="list in $ctrl.lists track by list._id"
-      lists="$ctrl.lists" list="list"></task-list-entry>
+    Grocery List
+    <div class="left-entry-wrapper">
+      <task-list-entry ng-repeat="list in $ctrl.lists track by list._id"
+        lists="$ctrl.lists" list="list"></task-list-entry>
+    </div>
+    
     <add-list></add-list>
   </ol>
 </div>

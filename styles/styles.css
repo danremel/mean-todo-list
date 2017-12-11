@@ -25,7 +25,7 @@ body {
   padding: 0 20px;
   position: relative;
   text-align: center;
-  border-bottom: 1px solid rgb(221, 196, 177);
+  border-bottom: 2px solid rgb(221, 196, 177);
 }
 
 .header, header {
@@ -44,11 +44,8 @@ body {
 }
 
 .lists-container {
-  border-top: 1px solid rgb(221, 196, 177);
-  border-bottom: 1px solid rgb(221, 196, 177);
   width: 35%;
   min-height: 40vh;
-  /* margin: 2% 5% 2% 45%; */
   color: #5d5d5d;
   font-size: 14px;
   display: flex;
@@ -63,17 +60,48 @@ body {
   font-size: 18px;
   outline: none;
   margin-bottom: 12%;
+  display: flex;
+  justify-content: space-between
 }
 
 .left-column, .right-column {
   float: left;
   min-height: 450px;
-  width: 50%;
+  margin: 1% 5% 1% 5%;
+  width: 40%;
+}
+
+.left-column {
+  height: 600px;
+}
+
+.left-entry-wrapper {
+  border-top: 2px solid rgb(221, 196, 177);
+  border-bottom: 2px solid rgb(221, 196, 177);
+  min-height: 300px;
+}
+
+.entry-wrapper {
+  border-top: 2px solid rgb(221, 196, 177);
+  border-bottom: 2px solid rgb(221, 196, 177);
+  min-height: 250px;
+}
+
+.entry-wrapper div {
+  padding: 5px;
+}
+
+.left-column input, .right-column input {
+  font-style: italic;
+  border: none;
+}
+
+.close-button {
+  display: inline-block;
+  right: 0;
 }
 
 .tasks-container {
-  border-top: 1px solid rgb(221, 196, 177);
-  border-bottom: 1px solid rgb(221, 196, 177);
   width: 50%;
   min-height: 40vh;
   margin: 2% 45% 2% 5%;
@@ -129,8 +157,8 @@ body {
 }
 
 .list-title-input, .task-input, .single-task {
-  min-width: 50%;
-  width: 50%;
+  min-width: 70%;
+  width: 70%;
 }
 
 .task-list-entry media {
@@ -139,10 +167,6 @@ min-height: 50vh;
 
 .media-body div {
   display: inline-block;
-}
-
-.col-md-5 {
-  float: right;
 }
 
 .task-list {

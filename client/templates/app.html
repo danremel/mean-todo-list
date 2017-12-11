@@ -1,11 +1,32 @@
-<!-- <div id="app-container"> -->
-    <div class="left-column">
-      <task-list lists="$ctrl.lists"><h5><em>taskList</em> component goes here</h5></task-list>
-      <!-- <add-list  lists="$ctrl.lists"><h5><em>addList</em> component goes here</h5></add-list> -->
-    </div>
-    <div class="right-column">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio in, officiis modi porro voluptatem iste dolorem quisquam, dolores saepe asperiores perferendis reiciendis ex. Commodi, provident? Explicabo fuga iure magni architecto?
-    </div>
+<task-list lists="$ctrl.lists"><h5><em>taskList</em> component goes here</h5></task-list>
+<!-- <add-list  lists="$ctrl.lists"><h5><em>addList</em> component goes here</h5></add-list> -->
 
-
-<!-- </div> -->
+<div class="right-column">
+    <ul>
+      Current Lists
+      <div class="entry-wrapper">
+        <div>Grocery List 
+          <div class="close-button"><img src="images/icon_close.svg"/></div>
+        </div>
+        <div>Monday Schedule
+          <div class="close-button"><img src="images/icon_close.svg"/></div>
+        </div>
+        <div>Tuesday Schedule 
+          <div class="close-button"><img src="images/icon_close.svg"/></div>            
+        </div>
+        <div>Wednesday 
+          <div class="close-button"><img src="images/icon_close.svg"/></div>            
+        </div>
+        <div>Click to view list 
+          <div class="close-button"><img src="images/icon_close.svg"/></div>            
+        </div>
+      </div>
+      
+      <div>
+        <input class="task-input" ngclass="form-control" placeholder="Click here add new item" ng-model="$ctrl.list" type="text" />
+        <div class="btn" ng-click="$ctrl.addList($ctrl.list)">
+          <span>save</span>
+        </div>
+      </div>
+    </ul>
+</div>
